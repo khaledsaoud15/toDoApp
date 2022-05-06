@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow: hidden;
+  background-color: #3c87ff;
+}
+
+.wrapper {
+  background-color: #fff;
+  max-width: 405px;
+  margin: 135px auto;
+  border-radius: 7px;
+  padding: 30px 0;
+}
+.task-input {
+  height: 52px;
+  padding: 0 25px;
+}
+.task-input input {
+  height: 100%;
+  width: 100%;
+  padding: 0 20px 0 53px;
+  border-radius: 5px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+.task-input input::placeholder {
+  color: #bfbfbf;
+}
+.controls,
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.controls {
+  padding: 18px 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filters span {
+  margin: 0 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+.filters span:first-child {
+  margin-left: 0;
+}
+.filters span.active {
+  color: #3c87ff;
+}
+
+.controls .clear-btn {
+  all: unset;
+  background: #3c87ff;
+  color: #fff;
+  padding: 7px 13px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.task-box {
+  margin: 20px 25px;
+}
+.task-box .task {
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 16px;
+}
+.task-box .task:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.task label {
+  display: flex;
+  align-items: center;
+}
+.task label input {
+  margin-right: 12px;
+}
+
+.task .settings {
+  cursor: pointer;
+  position: relative;
+}
+.settings .task-menu {
+  background-color: #fff;
+  box-shadow: 0 0 6px #00000026;
+  padding: 5px 0;
+  position: absolute;
+  border-radius: 5px;
+  z-index: 2;
+  right: -5px;
+  bottom: -65px;
+  transform: scale(0);
+  transform-origin: top right;
+  transition: transform 0.2s ease;
+}
+.settings .task-menu.show {
+  transform: scale(1);
+}
+
+.task-menu li {
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  justify-content: flex-start;
+  padding: 17px 15px;
+}
+.task-menu li:hover {
+  background-color: #f5f5f5;
+}
+.task-menu li:last-child {
+  margin-bottom: 0;
+}
+
+.task-menu li i {
+  padding-left: 4px;
+  margin-right: 2px;
+}
+
+p.checked {
+  text-decoration: line-through;
+}
